@@ -8,16 +8,20 @@ part 'character_state.dart';
 part 'character_cubit.freezed.dart';
 
 class CharacterCubit extends Cubit<CharacterState> {
+  final Box<CharacterModel> characterBox;
   final HarryPotterApi api;
 
-  CharacterCubit(this.api) : super(const CharacterState.loading());
+  CharacterCubit(this.characterBox, this.api)
+      : super(const CharacterState.loading());
 
   Future<void> fetchCharacters() async {
     try {
-      final Box<CharacterModel> box = await Hive.openBox<CharacterModel>('charactersBox');
+      final Box<CharacterModel> box = await Hive.openBox<CharacterModel>(
+          'charactersBox');
 
       if (box.isNotEmpty) {
         emit(CharacterState.loaded(box.values.toList()));
+        return;
       }
 
       final characters = await api.fetchCharacters();

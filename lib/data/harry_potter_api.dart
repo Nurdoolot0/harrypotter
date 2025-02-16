@@ -9,7 +9,6 @@ class HarryPotterApi {
     try {
       final response = await _dio.get('$baseUrl/en/characters');
 
-      // 🔍 Проверяем, что приходит в ответе
       print('Response data: ${response.data}');
 
       if (response.statusCode == 200 && response.data is List) {

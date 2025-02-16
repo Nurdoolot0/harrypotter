@@ -5,7 +5,7 @@ part 'character_model.freezed.dart';
 part 'character_model.g.dart';
 
 @freezed
-@HiveType(typeId: 0) // Указываем уникальный идентификатор типа
+@HiveType(typeId: 0)
 class CharacterModel with _$CharacterModel {
   factory CharacterModel({
     @HiveField(0) @JsonKey(name: "fullName") required String name,
