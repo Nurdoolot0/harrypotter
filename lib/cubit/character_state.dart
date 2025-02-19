@@ -1,5 +1,7 @@
-part of 'character_cubit.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import '../models/character_model.dart';
 
+part 'character_state.freezed.dart';
 
 @freezed
 class CharacterState with _$CharacterState {
