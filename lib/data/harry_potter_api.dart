@@ -5,7 +5,7 @@ class HarryPotterApi {
   final Dio _dio = Dio();
   final String baseUrl = 'https://potterapi-fedeperin.vercel.app';
 
-  Future<List<CharacterModel>> fetchCharacters() async {
+  Future<List<CharacterModel>> getCharacters() async {
     try {
       final response = await _dio.get('$baseUrl/en/characters');
 

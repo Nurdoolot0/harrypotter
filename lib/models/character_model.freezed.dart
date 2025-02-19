@@ -20,19 +20,14 @@ CharacterModel _$CharacterModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CharacterModel {
-  @HiveField(0)
   @JsonKey(name: "fullName")
   String get name => throw _privateConstructorUsedError;
-  @HiveField(1)
   @JsonKey(name: "hogwartsHouse")
   String? get house => throw _privateConstructorUsedError;
-  @HiveField(2)
   @JsonKey(name: "birthdate")
   String? get dateOfBirth => throw _privateConstructorUsedError;
-  @HiveField(3)
   @JsonKey(name: "interpretedBy")
   String? get actor => throw _privateConstructorUsedError;
-  @HiveField(4)
   @JsonKey(name: "image")
   String get image => throw _privateConstructorUsedError;
 
@@ -53,11 +48,11 @@ abstract class $CharacterModelCopyWith<$Res> {
       _$CharacterModelCopyWithImpl<$Res, CharacterModel>;
   @useResult
   $Res call(
-      {@HiveField(0) @JsonKey(name: "fullName") String name,
-      @HiveField(1) @JsonKey(name: "hogwartsHouse") String? house,
-      @HiveField(2) @JsonKey(name: "birthdate") String? dateOfBirth,
-      @HiveField(3) @JsonKey(name: "interpretedBy") String? actor,
-      @HiveField(4) @JsonKey(name: "image") String image});
+      {@JsonKey(name: "fullName") String name,
+      @JsonKey(name: "hogwartsHouse") String? house,
+      @JsonKey(name: "birthdate") String? dateOfBirth,
+      @JsonKey(name: "interpretedBy") String? actor,
+      @JsonKey(name: "image") String image});
 }
 
 /// @nodoc
@@ -115,11 +110,11 @@ abstract class _$$CharacterModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) @JsonKey(name: "fullName") String name,
-      @HiveField(1) @JsonKey(name: "hogwartsHouse") String? house,
-      @HiveField(2) @JsonKey(name: "birthdate") String? dateOfBirth,
-      @HiveField(3) @JsonKey(name: "interpretedBy") String? actor,
-      @HiveField(4) @JsonKey(name: "image") String image});
+      {@JsonKey(name: "fullName") String name,
+      @JsonKey(name: "hogwartsHouse") String? house,
+      @JsonKey(name: "birthdate") String? dateOfBirth,
+      @JsonKey(name: "interpretedBy") String? actor,
+      @JsonKey(name: "image") String image});
 }
 
 /// @nodoc
@@ -170,33 +165,28 @@ class __$$CharacterModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CharacterModelImpl implements _CharacterModel {
   _$CharacterModelImpl(
-      {@HiveField(0) @JsonKey(name: "fullName") required this.name,
-      @HiveField(1) @JsonKey(name: "hogwartsHouse") this.house,
-      @HiveField(2) @JsonKey(name: "birthdate") this.dateOfBirth,
-      @HiveField(3) @JsonKey(name: "interpretedBy") this.actor,
-      @HiveField(4) @JsonKey(name: "image") required this.image});
+      {@JsonKey(name: "fullName") required this.name,
+      @JsonKey(name: "hogwartsHouse") this.house,
+      @JsonKey(name: "birthdate") this.dateOfBirth,
+      @JsonKey(name: "interpretedBy") this.actor,
+      @JsonKey(name: "image") required this.image});
 
   factory _$CharacterModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$CharacterModelImplFromJson(json);
 
   @override
-  @HiveField(0)
   @JsonKey(name: "fullName")
   final String name;
   @override
-  @HiveField(1)
   @JsonKey(name: "hogwartsHouse")
   final String? house;
   @override
-  @HiveField(2)
   @JsonKey(name: "birthdate")
   final String? dateOfBirth;
   @override
-  @HiveField(3)
   @JsonKey(name: "interpretedBy")
   final String? actor;
   @override
-  @HiveField(4)
   @JsonKey(name: "image")
   final String image;
 
@@ -242,34 +232,29 @@ class _$CharacterModelImpl implements _CharacterModel {
 
 abstract class _CharacterModel implements CharacterModel {
   factory _CharacterModel(
-          {@HiveField(0) @JsonKey(name: "fullName") required final String name,
-          @HiveField(1) @JsonKey(name: "hogwartsHouse") final String? house,
-          @HiveField(2) @JsonKey(name: "birthdate") final String? dateOfBirth,
-          @HiveField(3) @JsonKey(name: "interpretedBy") final String? actor,
-          @HiveField(4) @JsonKey(name: "image") required final String image}) =
+          {@JsonKey(name: "fullName") required final String name,
+          @JsonKey(name: "hogwartsHouse") final String? house,
+          @JsonKey(name: "birthdate") final String? dateOfBirth,
+          @JsonKey(name: "interpretedBy") final String? actor,
+          @JsonKey(name: "image") required final String image}) =
       _$CharacterModelImpl;
 
   factory _CharacterModel.fromJson(Map<String, dynamic> json) =
       _$CharacterModelImpl.fromJson;
 
   @override
-  @HiveField(0)
   @JsonKey(name: "fullName")
   String get name;
   @override
-  @HiveField(1)
   @JsonKey(name: "hogwartsHouse")
   String? get house;
   @override
-  @HiveField(2)
   @JsonKey(name: "birthdate")
   String? get dateOfBirth;
   @override
-  @HiveField(3)
   @JsonKey(name: "interpretedBy")
   String? get actor;
   @override
-  @HiveField(4)
   @JsonKey(name: "image")
   String get image;
 
